@@ -559,13 +559,14 @@ class Albumentations:
             
             check_version(A.__version__, "1.0.3", hard=True)  # version requirement
 
-            # Define different sets of augmentations for different classes
+            # Define different sets of augmentations for different classes 
             T_0_1 = [
                 A.Blur(p=0.2),
                 A.MedianBlur(p=0.4),
                 A.ToGray(p=0.5),
                 A.CLAHE(p=0.01),
             ]
+            #default albumentation parameters
             T_other = [
                 A.Blur(p=0.01),
                 A.MedianBlur(p=0.01),
